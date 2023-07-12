@@ -10,3 +10,17 @@ button {
   margin: 10px;
 }
 
+.start {
+  border: solid red 10px;
+}
+
+.scores {
+  font-size: 25px;
+  display: flex;
+  padding: 15px;
+}
+
+.timer {
+  font-size: 20px;
+  font-family: Helvetica;
+}

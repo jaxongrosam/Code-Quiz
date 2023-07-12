@@ -11,13 +11,13 @@ const submitBtn = document.querySelector("#submit");
 
 const questions = [
   {
-    question1:
+    question:
       "What part of the HTML code would you link a CSS stylesheet under?",
     answer: "<head>",
     options: ["<body>", "<main>", "<head>", "<footer>"],
   },
   {
-    question2:
+    question:
       "What JavaScript code would you use to select an id tag from the HTML code?",
     answer: "document.querySelector",
     options: [
@@ -28,7 +28,7 @@ const questions = [
     ],
   },
   {
-    question3:
+    question:
       "What git command would you use to create a copy of an existing Git repository?",
     answer: "git clone",
     options: [
@@ -39,13 +39,13 @@ const questions = [
     ],
   },
   {
-    question4:
+    question:
       "True/False: In order to create a new repository on GitHub, you must have an account.",
     answer: "True",
     options: ["True", "False"],
   },
   {
-    question5:
+    question:
       "What JavaScript code would you use to execute a command on the webpage?",
     answer: "function",
     options: ["let", "function", "const", "var"],
@@ -54,11 +54,14 @@ const questions = [
 
 let currentQuestion = 0;
 let score = 0;
-let timeRemaining = 75;
+let timeLeft = 75;
 
 startBtn.addEventListener("click", startQuiz);
 
 function startQuiz() {
+  startBtn.style.display = "none";
+  startEl.style.display = "none";
+  questionsContainer.style.display = "block";
   showQuestion();
   startTimer();
 }
